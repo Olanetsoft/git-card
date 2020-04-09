@@ -8,7 +8,7 @@ export default class Card extends Component {
     render() {
         const profile = this.props;
         return (
-            <div class="flex justify-center">
+            <div className="flex justify-center">
             <div className="max-w-sm rounded overflow-hidden shadow-lg">
                 <img className="w-full h-56" src={profile.avatar_url} alt="Sunset in the mountains" />
                 <div className="px-6 py-4">

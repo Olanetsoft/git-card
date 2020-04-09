@@ -4,7 +4,7 @@ import Card from './Card';
 
 const CardList = (props) => {
     return (
-        <div class="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-3 gap-4">
   	{props.profiles.map(profile => <Card key={profile.id} {...profile}/>)}
 	</div>
     );
