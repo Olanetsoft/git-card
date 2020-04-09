@@ -5,7 +5,7 @@ import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-   <App title="The GitHub Cards App" />
+   <App title="GitHub Profile Finder" />
   </React.StrictMode>,
   document.getElementById('root')
 );
