@@ -28,9 +28,23 @@ export default class Form extends Component {
 
 
     render() {
-        let main;
         let show;
-            main = (
+        
+            if(this.state.errorHandling){
+            show = (
+                <div>
+                    <br />
+                        <div className="bg-red border border-red-400 text-red-700 px-4 py-2 rounded" role="alert">
+                        <strong className="font-bold">Holy smokes!</strong>
+                    <p className="block">{this.state.userName} Username Not Found !</p>
+                </div>
+                </div>
+                
+            )
+            }
+        
+        return (
+            <div className="flex justify-center bg-gray-100">
                 <div>
                     <form className="w-full items-center max-w-sm border-teal-500" onSubmit={this.handleSubmit}>
                         <div className="flex items-center border-b border-b-2 border-teal-500 py-2">
@@ -49,26 +63,6 @@ export default class Form extends Component {
                     </form>
                 </div>
 
-
-            );
-        
-            if(this.state.errorHandling){
-       
-            show = (
-                <div>
-                    <br />
-                        <div className="bg-red border border-red-400 text-red-700 px-4 py-2 rounded" role="alert">
-                    <strong className="font-bold">Holy smokes!</strong>
-                    <p className="block">GitHub User Not Found !</p>
-                </div>
-                </div>
-                
-            )
-            }
-        
-        return (
-            <div className="flex justify-center bg-gray-100">
-                {main}
                {show}
             </div>
         )
