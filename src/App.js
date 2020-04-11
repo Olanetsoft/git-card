@@ -9,6 +9,9 @@ export default class App extends Component {
   state = {
     profiles: [],
   };
+
+
+  
   addNewProfile = (profileData) => {
   	this.setState(prevState => ({
     	profiles: [...prevState.profiles, profileData],
